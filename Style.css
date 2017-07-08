@@ -1,0 +1,108 @@
+body, html{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Francois One', sans-serif;
+}
+
+/*Header Splash Page*/
+header{
+  background-image: url(fitness.jpg);
+  box-shadow: inset 0 0 0 1000px rgba(255, 189, 0, 0.3);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header img{
+  padding: 0;
+  margin: 0;
+}
+
+h2{
+  margin: 0;
+  padding: 2% 0 0 0;
+}
+
+/*General information about the company*/
+#General{
+  width: 80%;
+}
+
+#General hr{
+  width: 80%;
+}
+.description, .done, .differences{
+  margin: 0;
+  padding: 0 10%;
+  overflow: hidden;
+  //border-bottom: thick solid #ff0000;
+}
+
+#General p{
+  margin: 0;
+  padding: 0;
+}
+
+/* The Three sections of posting idk*/
+.container{
+  width: 80%;
+  margin:auto;
+  overflow: hidden;
+}
+
+#catagories{
+  margin-top: 0px;
+  padding-left: 3%;
+}
+
+#catagories .box{
+  float:left;
+  width:30%;
+  padding: 10px;
+  text-align: center;
+}
+
+#catagories .box img{
+  width: 90px;
+  height: 90px;
+}
+
+/*footer*/
+
+footer{
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 60px;
+  padding-top: 5px;
+  background-color: #FFBD00;
+  //text-align: center;
+}
+
+footer .logo{
+  float: left;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+
+footer .title{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+footer .contact{
+  position:absolute;
+  right: 0;
+  padding-right: 5px;
+}
+
+footer .logo img{
+  width: 40px;
+  height: 40px;
+}
