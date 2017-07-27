@@ -1,94 +1,429 @@
-body, html{
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
+body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  font-family: 'Francois One', sans-serif;
+  background: white;
+  font-family: HELVETICA;
+  color: #444;
 }
 
-/*Header Splash Page*/
+h2, h3{
+  color: black;
+}
+
+p{
+  padding: 0;
+  margin: 0;
+}
+
+/*Header with Nav Bar*/
 header{
-  background-image: url(fitness.jpg);
-  box-shadow: inset 0 0 0 1000px rgba(255, 189, 0, 0.3);
-  background-size: cover;
-  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: black;
+  height: 70px;
   width: 100%;
+  color: white;
+}
+
+/*Logo in the Nav bar*/
+.logo{
+  float: left;
+  padding: 0;
+  margin: 0;
+  margin-left: 5%;
+}
+
+.logo img{
+  margin-top: 2px;
+  height: 65px;
+}
+
+/*NavBar*/
+.navbar{
+  width: 95%;
+}
+
+nav ul{
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.4s;
+-ms-transition: max-height 0.4s;
+-moz-transition: max-height 0.4s;
+-o-transition: max-height 0.4s;
+-webkit-transition: max-height 0.4s;
+}
+
+nav ul li{
+  font-family: 'Anton', sans-serif;
+  font-size: 20px;
+  display: inline-block;
+  padding: 20px;
+  float: right;
+}
+
+nav ul li:hover{
+  background: #cd5e00;
+  cursor: pointer;
+}
+
+/*AppStore Information and where to Download*/
+.AppStore{
+  height: 800px;
+  overflow: hidden;
+  //background-image: url("fitnessBW.jpg");
+
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.bg{
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  z-index: -1;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b2/Mountain_running.JPG');
+
+  background-size: cover;
+  background-size: 170% 170%;
+  //background-size: cover;
+  //background-attachment: fixed;
+  background-position: -700px -200px;
+  filter: blur(2px) grayscale(100%);
+
+}
+
+.AppStore .left{
+  float: left;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  text-align: center;
+  z-index: 1;
+}
+
+.AppStore .left img{
+  padding-top: 25px;
+  float: right;
+  height: 750px;
+  vertical-align: bottom;
+}
+
+.AppStore .right{
+  width: 50%;
+  float: right;
+  height: inherit;
+  font-family: 'Anton', sans-serif;
+  font-size: 100px;
+  color: white;
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
 
-header img{
-  padding: 0;
+.AppStore .right p{
+  float: left;
+}
+
+.AppStore .right .pics{
+  align-content: center;
+  display:inline-flex;
+}
+
+.AppStore .right .pics img{
+  padding-right: 20px;
+  height: 110px;
+}
+
+/*linked video section*/
+.video{
   margin: 0;
+  padding: 0 25% 20px 25%;
+  height: 80%;
 }
 
-h2{
+.video h2{
+  padding-top: 20px;
+  font-size: 50px;
+  font-family: Anton;
   margin: 0;
-  padding: 2% 0 0 0;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  border-bottom: thick solid #cd5e00;
 }
 
-/*General information about the company*/
-#General{
-  width: 80%;
+iframe{
+  padding: 20px 0 20px 0;
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
 }
 
-#General hr{
-  width: 80%;
+/*divider*/
+.divider{
+  height: 300px;
 }
-.description, .done, .differences{
+
+.divider .bg{
+  width: 100%;
+  //height: 400px;
+  background-image: url('https://static.pexels.com/photos/248547/pexels-photo-248547.jpeg');
+  background-size: 100% auto;
+  background-position: 0 10%;
+  filter: blur(0px) grayscale(100%);
+
+}
+
+.divider p{
+  height: 400px;
+  width: 100%;
+  //background: rgba(205,94,0, 0.5);
+}
+
+/*yoga*/
+.divider .b{
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  background-image: url('http://himalayanyogamilwaukee.org/wp-content/uploads/2017/08/YogaLingo.jpg');
+  background-size: 100% auto;
+  background-position: 0 20%;
+  filter: blur(0px) grayscale(100%);
+  background-repeat: no-repeat;
+}
+
+/*crew*/
+.divider .c{
+  width: 100%;
+  height: inherit;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rowing_at_the_1988_Summer_Olympics.JPEG/1280px-Rowing_at_the_1988_Summer_Olympics.JPEG');
+  background-size: 110% auto;
+  background-repeat: no-repeat;
+  background-position: -50px 60%;
+  filter: blur(0px) grayscale(100%);
+}
+
+/*dance*/
+.divider .d{
+  width: 100%;
+  height: inherit;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/26/New_Zealand_-_Dance_class_-_9514.jpg');
+  background-size: 100% auto;
+  background-position: -10% 75%;
+  background-repeat: no-repeat;
+  filter: blur(0px) grayscale(100%);
+}
+
+/*Info about "Our Mission"*/
+.Mission{
   margin: 0;
-  padding: 0 10%;
-  overflow: hidden;
-  //border-bottom: thick solid #ff0000;
+  padding: 25%;
+  position: relative;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  background: white;
 }
 
-#General p{
-  margin: 0;
-  padding: 0;
-}
-
-/* The Three sections of posting idk*/
-.container{
-  width: 80%;
-  margin:auto;
-  overflow: hidden;
-}
-
-#catagories{
-  margin-top: 0px;
-  padding-left: 3%;
-}
-
-#catagories .box{
-  float:left;
-  width:30%;
-  padding: 10px;
+.Mission p{
+  font-size: 20px;
   text-align: center;
+  padding: 20px 0;
 }
 
-#catagories .box img{
-  width: 90px;
-  height: 90px;
+.Mission h2{
+  padding-top: 20px;
+  font-size: 50px;
+  font-family: Anton;
+  margin: 0;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  border-bottom: thick solid #cd5e00;
 }
 
-/*footer*/
+/*Info about "Our Differences"*/
+.Difference{
+  margin: 0;
+  padding: 25%;
+  position: relative;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  background-color: white;
+  //background-image: url('runner.jpg');
+}
 
+.Difference h2{
+  padding-bottom: 20px;
+  border-bottom: thick solid #cd5e00;
+}
+
+.Difference p{
+  font-size: 20px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.Difference h2{
+  padding-top: 20px;
+  font-size: 50px;
+  font-family: Anton;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+/*APP FEATURES (ie Nutrition,  Excerise, Wellness)*/
+.Features{
+  margin: 0;
+  padding: 0 25% 0 25%;
+  background: white;
+}
+
+.Features h2{
+  font-family: Anton;
+  font-size: 50px;
+  margin:0;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: thick solid #cd5e00;
+}
+
+.Features .intro{
+  padding: 20px 0;
+  font-size: 20px;
+}
+
+.Features h3{
+  font-family: Anton;
+  font-size: 30px;
+  margin: 0;
+}
+
+.Features p{
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.table{
+  display: table;
+  margin: 0 auto;
+  position: relative;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+  list-style:none;
+}
+
+.container li {
+  margin:30px 50px 30px 50px;
+  margin: 20px;
+  width: 150px;
+  text-align: center;
+  float: left;
+}
+
+.container img {
+  //display:block;
+  //border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  background: white;
+  margin: 0;
+}
+
+/*FAQ*/
+.FAQ{
+  margin: 0;
+  padding: 0 25% 0 25%;
+  background-color: white;
+}
+
+.FAQ h2{
+  font-family: Anton;
+  font-size: 50px;
+  margin:0;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-bottom: thick solid #cd5e00;
+}
+
+.FAQ .content .intro{
+  margin: 20px 0;
+}
+
+.FAQ p{
+  font-size: 20px;
+}
+
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background: linear-gradient(to right, #cd5e00 0%, #ffcc00 99%);
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+div.panel {
+    padding: 0px 18px;
+    margin: 10px 10px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/*Footer with contact and title (also contains links to social media and )*/
 footer{
   left: 0px;
   bottom: 0px;
   width: 100%;
-  height: 60px;
+  height: 70px;
   padding-top: 5px;
-  background-color: #FFBD00;
-  //text-align: center;
+  background: black;
+  color: white;
 }
 
 footer .logo{
   float: left;
+  padding-right: 15px;
   padding-top: 5px;
-  padding-left: 10px;
+  overflow: hidden;
+  margin: 0;
 }
 
+#socialMedia{
+  padding-left: 30px;
+}
 
 footer .title{
   position: absolute;
@@ -99,10 +434,219 @@ footer .title{
 footer .contact{
   position:absolute;
   right: 0;
-  padding-right: 5px;
+  padding: 13px 30px 0 0;
+  font-family: 'Anton', sans-serif;
+  font-size: 25px;
 }
 
 footer .logo img{
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
+}
+
+/*Nav bar on Mobile*/
+.handle{
+  width: 100%;
+  background: black;
+  //text-align: le;
+  box-sizing: border-box;
+  padding: 15px 10px;
+  cursor: pointer;
+  color: white;
+  display: none;
+}
+
+.handle p{
+  float: right;
+  font-size: 28px;
+  font-family: 'Anton', sans-serif;
+  padding: 0;
+  margin-bottom: : 10px;
+}
+
+.hanlde img{
+  height: 30 em;
+}
+
+/*adjusts the links to account for the nav bar*/
+:target:before {
+  content:"";
+  display:block;
+  height:60px; /* fixed header height*/
+  margin:-60px 0 0; /* negative fixed header height */
+}
+
+/*Link color*/
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/*Reformat for Mobile Devices*/
+@media screen and (max-width: 1154px){
+
+  /*Deviders*/
+  .divider{
+    height: 20vh;
+  }
+
+  :target:before {
+    height: 70px;
+    margin: -10px 0 0;
+  }
+
+  /*video*/
+  .video{
+    padding: 0 5% 0 5%;
+  }
+
+  iframe{
+    padding: 20px 0 20px 0;
+    display: block;
+    margin: 0 auto;
+    max-width: 95%;
+  }
+
+  .Mission{
+    padding: 5%;
+  }
+  .Difference{
+    padding: 5%;
+  }
+  .Features{
+    padding: 0 5% 0 5%;
+  }
+  .FAQ{
+    padding: 0 5% 0 5%;
+  }
+
+  .table{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-around;
+  }
+
+  .container li {
+    margin:30px 50px 30px 50px;
+    margin: 20px;
+    width: 90%;
+    text-align: center;
+    float: none;
+  }
+
+  .container img {
+    display:block;
+    border-radius: 50%;
+    width: 80%;
+    height: 80%;
+    background: white;
+    margin: 0;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+/*************************************/
+  header .logo{
+    display: none;
+  }
+
+  nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: linear-gradient(to right, #cd5e00 0%, #ffcc00 99%);
+    width: 100%;
+    z-index: 1;
+  }
+
+  .Mission{
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  nav ul{
+    max-height: 20em;
+  }
+  .show{
+    max-height: 0em;
+  }
+  nav ul li{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: center;
+  }
+  .handle{
+    display: block;
+  }
+
+  nav ul li:hover{
+    background: black;
+  }
+
+/*AppStore CONTENT adjusted and modified for moblie viewing*/
+
+  .AppStore{
+    height: 91vh;
+  }
+
+  .AppStore .left{
+    display: none;
+  }
+
+  .AppStore .right{
+    width: 100%;
+    text-align: center;
+    font-size: 8vh;
+    height: inherit;
+  }
+
+  .bg{
+    background-position: 50% 0;
+    background-size: cover;
+    filter: blur(3px);
+  }
+
+  .AppStore .right .pics{
+    display: block;
+    margin: 0 auto;
+  }
+
+  .AppStore .right .pics img{
+    height: 10vh;
+  }
+
+  /*FOOTER adjusted verticallu for Mobile*/
+  footer{
+    height: auto;
+  }
+
+  footer .title{
+    position: relative;
+    text-align: center;
+    width: 100%;
+  }
+
+  footer .contact{
+    position: relative;
+  }
+
+  footer .contact{
+    text-align: center;
+    padding: 0;
+    padding: 10px 0 0 0;
+  }
+
+footer .logo img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  footer #socialMedia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 }
